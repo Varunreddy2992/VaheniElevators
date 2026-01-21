@@ -1,0 +1,256 @@
+.products {
+    background-color: var(--white);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.categoryTag {
+    background: var(--accent);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--secondary);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--slate-600);
+    max-width: 800px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.tabContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.tabs {
+    background: var(--muted);
+    padding: 6px;
+    border-radius: var(--radius-full);
+    display: flex;
+    gap: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.tab {
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    color: var(--slate-600);
+    transition: all 0.2s;
+}
+
+.tab.active {
+    background: var(--white);
+    color: var(--secondary);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.content {
+    background: var(--white);
+    min-height: 400px;
+}
+
+.productDisplay,
+.motorsLayout {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.imageGallery {
+    flex: 1;
+}
+
+.mainImage {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4/5;
+    background: var(--muted);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productInfo,
+.motorsInfo {
+    flex: 1;
+}
+
+.infoTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.infoText {
+    color: var(--slate-600);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.productList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.productItem {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: border-color 0.2s;
+}
+
+.productItem:hover {
+    border-color: var(--primary);
+}
+
+.itemTitle {
+    font-weight: 700;
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.itemDesc {
+    color: var(--slate-600);
+    font-size: 0.95rem;
+}
+
+/* Components Grid */
+.componentsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.compCard {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.compCard:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.compName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.listItem {
+    color: var(--slate-600);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.listItem::before {
+    content: "•";
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Motors Grid */
+.motorGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.motorItem {
+    padding: 1rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--slate-600);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.motorItem:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.controlsSection {
+    background: var(--teal-50);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+}
+
+.controlsTitle {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.controlsText {
+    color: var(--slate-600);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+
+    .productDisplay,
+    .motorsLayout {
+        flex-direction: column;
+    }
+
+    .componentsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .componentsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .motorGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}

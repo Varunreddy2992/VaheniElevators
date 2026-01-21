@@ -1,0 +1,96 @@
+.navbar {
+    height: 80px;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logoIcon {
+    background: var(--primary);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandName {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 1.2rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.brandSub {
+    font-size: 0.8rem;
+    color: var(--slate-600);
+    margin-top: 2px;
+}
+
+.navLinks {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.navLinks a {
+    font-weight: 500;
+    color: var(--secondary);
+    transition: color 0.2s;
+}
+
+.navLinks a:hover {
+    color: var(--primary);
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.phoneIcon {
+    color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+
+    .navLinks,
+    .navActions {
+        display: none;
+    }
+}
